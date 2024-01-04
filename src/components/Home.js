@@ -20,9 +20,16 @@ const Home = () => {
             return Math.round(actualPrice - discountAmnt);
         }
 
+        function addToCart(product){
+            dispatch(addCart(product));
+            alert("Product added to Cart");
+        }
+
+        //()=>dispatch(addCart(product))
+
   return (
     <div>
-        <div><h1>All Items</h1></div>
+        <div className='header'><h1>All Items</h1></div>
         <div className='container'>
 
             {
@@ -38,7 +45,7 @@ const Home = () => {
                             <p class="buy-price">Buy Price : $. {calculateBuyPrice(product.price,product.discountPercentage)}</p>
                         </div>
                         <div className='btn-div'>
-                            <button className='btn' onClick={()=>dispatch(addCart(product))}>Add to cart</button>
+                            <button className='btn' onClick={()=>addToCart(product)}>Add to cart</button>
                         </div>
                     </div>
                 ))

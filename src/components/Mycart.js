@@ -32,9 +32,12 @@ const Mycart = () => {
 
   return (
     <div>
-        <div><h1>My Cart</h1></div>
+        <div className='header'><h1>My Cart</h1></div>
         <div className='main-container'>
             <div className='container-cart'>
+                {
+                    cart.length === 0 && <div className='cart-empty'>Cart is Empty, Add Products to Cart</div>
+                }
              {
                 cart.length > 0 && cart.map((product,index)=>(
                     
@@ -55,7 +58,7 @@ const Mycart = () => {
                 }
             </div>
             <div className='checkout-container'>
-                <h1>checkout List</h1>
+                <h1 className='sub-header'>Checkout List</h1>
                {
                 cart.length > 0 && cart.map((product,index)=>(
                     
