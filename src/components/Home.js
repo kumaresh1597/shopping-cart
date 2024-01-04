@@ -12,18 +12,7 @@ const Home = () => {
     console.log(data.products);
     console.log(cart);
     useEffect(()=>{
-
-        // fetch("https://dummyjson.com/products")
-        // .then(res=>res.json())
-        // .then((result)=>{
-        //     console.log(result.products);
-        //     setProducts(result.products);
-        // })
-        // .catch((error)=>console.log)
-
         dispatch(postRequest());
-
-
     },[])
 
     function calculateBuyPrice(actualPrice, discount){
@@ -49,7 +38,7 @@ const Home = () => {
                             <p class="buy-price">Buy Price : $. {calculateBuyPrice(product.price,product.discountPercentage)}</p>
                         </div>
                         <div className='btn-div'>
-                            <button className='btn' onClick={()=>dispatch(addCart({product}))}>Add to cart</button>
+                            <button className='btn' onClick={()=>dispatch(addCart(product))}>Add to cart</button>
                         </div>
                     </div>
                 ))
