@@ -1,3 +1,18 @@
+# Shopping cart
+
+Creating a simple shopping cart project involves building a system where users can add items to their cart, view the items in the cart, and proceed to checkout.
+
+ - Home page
+   - Displays all the products and details, such as product image, product name, base price, and buy price, along with an "Add to Cart" button.
+   - Upon clicking the "Add to Cart" button, the selected product is added to the cart.
+
+- Cart Page
+  - Displays all the products that have been added to the cart, including product details and a "Remove from Cart" button.
+  - Additionally, there is a checkout section where the total value of the cart is dynamically calculated.
+
+# Tech stack
+  The platform is developed using React and Redux for state management.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
